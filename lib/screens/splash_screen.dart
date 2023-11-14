@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:zakat_calculator/app_utils/appfonts.dart';
-import 'package:zakat_calculator/screens/home_screen.dart';
+import 'package:zakat_calculator/screens/home_screen/home_screen.dart';
 
 import '../app_utils/app_colors.dart';
 import 'main_screen.dart';

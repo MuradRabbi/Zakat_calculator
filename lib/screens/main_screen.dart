@@ -1,10 +1,10 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:zakat_calculator/app_utils/app_colors.dart';
-import 'package:zakat_calculator/screens/home_screen.dart';
+import 'package:zakat_calculator/screens/home_screen/home_screen.dart';
 import 'package:zakat_calculator/screens/more_screen.dart';
 import 'package:zakat_calculator/screens/report_screen.dart';
-import 'package:zakat_calculator/screens/zakat_calculator.dart';
+import 'package:zakat_calculator/screens/calculator_screen/zakat_calculator.dart';
 
 
 

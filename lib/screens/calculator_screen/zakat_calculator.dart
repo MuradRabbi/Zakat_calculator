@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:zakat_calculator/app_utils/appfonts.dart';
-import 'package:zakat_calculator/screens/calculator_step_four.dart';
-import 'package:zakat_calculator/screens/calculator_step_one.dart';
-import '../app_utils/app_colors.dart';
+import 'package:zakat_calculator/screens/calculator_screen/calculator_step_four.dart';
+import 'package:zakat_calculator/screens/calculator_screen/calculator_step_one.dart';
+import '../../app_utils/app_colors.dart';
 import 'calculator_step_three.dart';
 import 'calculator_step_two.dart';
 
@@ -42,6 +42,7 @@ class _ZakatCalculaterState extends State<ZakatCalculater> {
               margin: const EdgeInsets.symmetric(horizontal: 15),
               height:MediaQuery.of(context).size.height/1.48,
               child: PageView(
+                physics: const NeverScrollableScrollPhysics() ,
                 controller: _pageViewController,
                 children: const [
                   CalculatorStepOne(),
