@@ -14,7 +14,11 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  final List<Widget> _page = [HomeScreen(), ZakatCalculater(), ReportScreen(), ProfileScreen()];
+  final List<Widget> _page = [
+    HomeScreen(),
+    // ZakatCalculater(),
+    ReportScreen(),
+    ProfileScreen()];
   GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
   int _activePage = 0;
 
@@ -27,7 +31,7 @@ class _MainScreenState extends State<MainScreen> {
           height: 60.0,
           items: <Widget>[
             Container(padding: EdgeInsets.all(3.0),height: 30,width: 30,child: Image.asset("assets/images/menu.png", color: Colors.white,),),
-            Container(padding: EdgeInsets.all(3.0),height: 30,width: 30,child: Image.asset("assets/images/calculator.png", color: Colors.white,),),
+            // Container(padding: EdgeInsets.all(3.0),height: 30,width: 30,child: Image.asset("assets/images/calculator.png", color: Colors.white,),),
             Container(padding: EdgeInsets.all(3.0),height: 30,width: 30,child: Image.asset("assets/images/report.png", color: Colors.white,),),
             Container(padding: EdgeInsets.all(3.0),height: 30,width: 30,child: Image.asset("assets/images/more.png", color: Colors.white,),),
 

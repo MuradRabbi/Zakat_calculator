@@ -40,7 +40,7 @@ class _ZakatCalculaterState extends State<ZakatCalculater> {
             const SizedBox(height: 10,),
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 15),
-              height:MediaQuery.of(context).size.height/1.48,
+              height:MediaQuery.of(context).size.height/1.4,
               child: PageView(
                 physics: const NeverScrollableScrollPhysics() ,
                 controller: _pageViewController,
