@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:zakat_calculator/screens/calculator_screen/calculator_step_three_widgets/step_three_table.dart';
 
 import '../../app_utils/app_colors.dart';
 import '../../app_utils/appfonts.dart';
+import '../../custom_widgets/calculator_steps_title.dart';
 
 
 
@@ -38,18 +40,7 @@ class _CalculatorStepThreeState extends State<CalculatorStepThree> {
     return SizedBox(
       child: ListView(
         children: [
-          Row(
-            children: [
-              SizedBox(width: 15,),
-              Text("তৃতীয় ধাপ",style: TextStyle(color: AppColors.blackTextColor, fontSize: 18, fontWeight: FontWeight.w700, fontFamily: AppFonts.RalewayRegular),),
-              SizedBox(width: 15,),
-              SizedBox(
-                height: 18,
-                width: 24,
-                child: Image.asset("assets/images/step.png", color: AppColors.blackTextColor,),
-              ),
-            ],
-          ),
+          CalculatorStepsTitle(stepsTitle:"তৃতীয় ধাপ",),
           SizedBox(height: 15,),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 15),
@@ -61,7 +52,8 @@ class _CalculatorStepThreeState extends State<CalculatorStepThree> {
             child: Text("ক (২). টাকা-পয়সা", style: TextStyle(color: AppColors.blackTextColor, fontSize: 16, fontWeight: FontWeight.w700, fontFamily: AppFonts.RalewayRegular),),
           ),
           SizedBox(height: 10,),
-          stepThreeTable()
+          StepThreeTable(),
+
 
         ],
       ),

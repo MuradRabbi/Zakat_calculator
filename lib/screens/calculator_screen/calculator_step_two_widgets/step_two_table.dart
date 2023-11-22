@@ -24,9 +24,9 @@ class StepTwoTable extends StatelessWidget {
       children: [
         tableHead() ,
         SizedBox(height: 20,),
-        StepTwoInputField(qtyController: goldQtyController, presentPriceController: goldPresentPriceController, totalPriceController: goldTotalPriceController , fieldDescription: "*** ব্যবহৃত অলংকার হোক বা ব্যবসার পণ্য, অলংকার, বার বা গিনি কয়েন যে আকারেই থাকুক সব প্রকারের সোনা হিসাবযোগ্য।",),
+        StepTwoInputField(qtyController: goldQtyController, presentPriceController: goldPresentPriceController, totalPriceController: goldTotalPriceController ,assetName: "১। স্বর্ণ", fieldDescription: "*** ব্যবহৃত অলংকার হোক বা ব্যবসার পণ্য, অলংকার, বার বা গিনি কয়েন যে আকারেই থাকুক সব প্রকারের সোনা হিসাবযোগ্য।",),
         SizedBox(height: 20,),
-        StepTwoInputField(qtyController: silverQtyController, presentPriceController: silverPresentPriceController, totalPriceController: silverTotalPriceController , fieldDescription: "*** ব্যবহৃত অলংকার হোক বা ব্যবসার পণ্য, অলংকার, বার বা গিনি কয়েন যে আকারেই থাকুক সব প্রকারের রূপা হিসাবযোগ্য।",),
+        StepTwoInputField(qtyController: silverQtyController, presentPriceController: silverPresentPriceController, totalPriceController: silverTotalPriceController ,assetName: "২। রূপা", fieldDescription: "*** ব্যবহৃত অলংকার হোক বা ব্যবসার পণ্য, অলংকার, বার বা গিনি কয়েন যে আকারেই থাকুক সব প্রকারের রূপা হিসাবযোগ্য।",),
 
       ],
     );
@@ -59,7 +59,7 @@ class StepTwoTable extends StatelessWidget {
           borderRadius: BorderRadius.circular(5),
           color: AppColors.appThemeColor,
         ),
-        child: Text( title ,textAlign: TextAlign.center , textScaleFactor: 1.0, style: TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w500, fontFamily: AppFonts.RalewayRegular),),
+        child: Text( title ,textAlign: TextAlign.center , textScaleFactor: 1.0, style: TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.w500, fontFamily: AppFonts.RalewayRegular),),
       ),
     );
   }

@@ -49,6 +49,8 @@ class _ZakatCalculaterState extends State<ZakatCalculater> {
                   CalculatorStepTwo(),
                   CalculatorStepThree(),
                   CalculatorStepFour(),
+                  CalculatorStepFour(),
+                  CalculatorStepFour(),
                 ],
                 onPageChanged: (value) => {setCurrentPage(value)},
               ),
@@ -56,7 +58,7 @@ class _ZakatCalculaterState extends State<ZakatCalculater> {
             const SizedBox(height: 10,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: List.generate(4, (index) => getIndicator(index)),
+              children: List.generate(6, (index) => getIndicator(index)),
             ),
             const SizedBox(height: 15,),
             Padding(
@@ -69,7 +71,7 @@ class _ZakatCalculaterState extends State<ZakatCalculater> {
                     child: previousStepButton(),
                   ),
                   Visibility(
-                    visible: currentPage == 3 ? false : true,
+                    visible: currentPage == 5 ? false : true,
                     child: nextStepButton(),
                   ),
 
@@ -158,20 +160,20 @@ class _ZakatCalculaterState extends State<ZakatCalculater> {
   }
 
   void nextChangePage(){
-    if(currentPage == 4){
+    if(currentPage == 6){
       // Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginScreen()));
     }
     else{
-      _pageViewController.animateToPage(currentPage + 1, duration: Duration(milliseconds: 200), curve: Curves.linear);
+      _pageViewController.animateToPage(currentPage + 1, duration: Duration(milliseconds: 500), curve: Curves.linear);
     }
   }
 
   void previousChangePage(){
-    if(currentPage == 4){
+    if(currentPage == 6){
       // Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginScreen()));
     }
     else{
-      _pageViewController.animateToPage(currentPage - 1, duration: Duration(milliseconds: 200), curve: Curves.linear);
+      _pageViewController.animateToPage(currentPage - 1, duration: Duration(milliseconds: 500), curve: Curves.linear);
     }
   }
 
@@ -184,7 +186,7 @@ class _ZakatCalculaterState extends State<ZakatCalculater> {
 
   AnimatedContainer getIndicator(int pageNo){
     return AnimatedContainer(
-      duration: Duration(milliseconds: 100),
+      duration: Duration(milliseconds: 500),
       height: 10,
       width: (currentPage == pageNo) ? 30 : 10,
       margin: EdgeInsets.symmetric(horizontal: 5),

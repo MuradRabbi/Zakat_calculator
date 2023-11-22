@@ -12,12 +12,14 @@ class StepTwoInputField extends StatelessWidget {
   TextEditingController qtyController;
   TextEditingController presentPriceController;
   TextEditingController totalPriceController;
+  String assetName;
   String? fieldDescription;
 
    StepTwoInputField({
     required this.qtyController,
      required this.presentPriceController,
      required this.totalPriceController,
+     required this.assetName,
      this.fieldDescription,
      super.key
    });
@@ -41,7 +43,7 @@ class StepTwoInputField extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5),
                   border: Border.all(width: 1.0, color: AppColors.appThemeColor),
                 ),
-                child: Text("১। স্বর্ণ", textScaleFactor: 1.0, style: TextStyle(color: AppColors.blackTextColor, fontSize: 14, fontWeight: FontWeight.w500, fontFamily: AppFonts.RalewayRegular),),
+                child: Text(assetName, textScaleFactor: 1.0, style: TextStyle(color: AppColors.blackTextColor, fontSize: 14, fontWeight: FontWeight.w500, fontFamily: AppFonts.RalewayRegular),),
               ),
             ),
             SizedBox(width: 3,),

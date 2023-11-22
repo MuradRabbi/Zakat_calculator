@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:zakat_calculator/app_utils/size_config.dart';
+import 'package:zakat_calculator/custom_widgets/calculator_steps_title.dart';
 import 'package:zakat_calculator/screens/calculator_screen/calculator_step_one_widgets/buttet_item.dart';
 import 'package:zakat_calculator/screens/calculator_screen/calculator_step_one_widgets/date_input_field.dart';
 import '../../app_utils/app_colors.dart';
@@ -30,18 +31,7 @@ class _CalculatorStepOneState extends State<CalculatorStepOne> {
       child: Column(
         children: [
           SizedBox(height: getProportionateScreenHeight(25),),
-          Row(
-            children: [
-              SizedBox(width: getProportionateScreenWidth(15),),
-              Text("প্রথম ধাপ",style: TextStyle(color: AppColors.blackTextColor, fontSize: 18, fontWeight: FontWeight.w700, fontFamily: AppFonts.RalewayRegular),),
-              SizedBox(width: getProportionateScreenWidth(15),),
-              SizedBox(
-                height: getProportionateScreenHeight(18),
-                width: getProportionateScreenWidth(24),
-                child: Image.asset("assets/images/step.png", color: AppColors.blackTextColor,),
-              ),
-            ],
-          ),
+          CalculatorStepsTitle(stepsTitle: "প্রথম ধাপ"),
           SizedBox(height: getProportionateScreenHeight(10),),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 15,),
