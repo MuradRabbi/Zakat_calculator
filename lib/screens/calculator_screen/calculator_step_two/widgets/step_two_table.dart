@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:zakat_calculator/app_utils/size_config.dart';
-import 'package:zakat_calculator/screens/calculator_screen/calculator_step_two_widgets/step_two_input_field.dart';
-
-import '../../../app_utils/app_colors.dart';
-import '../../../app_utils/appfonts.dart';
+import 'package:zakat_calculator/screens/calculator_screen/calculator_step_two/widgets/step_two_input_field.dart';
+import '../../../../app_utils/app_colors.dart';
+import '../../../../app_utils/appfonts.dart';
 
 
 

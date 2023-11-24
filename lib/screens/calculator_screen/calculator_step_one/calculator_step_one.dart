@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:zakat_calculator/app_utils/size_config.dart';
 import 'package:zakat_calculator/custom_widgets/calculator_steps_title.dart';
-import 'package:zakat_calculator/screens/calculator_screen/calculator_step_one_widgets/buttet_item.dart';
-import 'package:zakat_calculator/screens/calculator_screen/calculator_step_one_widgets/date_input_field.dart';
-import '../../app_utils/app_colors.dart';
-import '../../app_utils/appfonts.dart';
-import 'calculator_step_one_widgets/name_input_field.dart';
+import 'package:zakat_calculator/screens/calculator_screen/calculator_step_one/widgets/buttet_item.dart';
+import 'package:zakat_calculator/screens/calculator_screen/calculator_step_one/widgets/date_input_field.dart';
+import '../../../app_utils/app_colors.dart';
+import '../../../app_utils/appfonts.dart';
+import 'widgets/name_input_field.dart';
 
 
 

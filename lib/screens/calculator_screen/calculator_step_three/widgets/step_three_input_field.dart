@@ -2,9 +2,9 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 
-import '../../../app_utils/app_colors.dart';
-import '../../../app_utils/appfonts.dart';
-import '../../../app_utils/size_config.dart';
+import '../../../../app_utils/app_colors.dart';
+import '../../../../app_utils/appfonts.dart';
+import '../../../../app_utils/size_config.dart';
 
 
 

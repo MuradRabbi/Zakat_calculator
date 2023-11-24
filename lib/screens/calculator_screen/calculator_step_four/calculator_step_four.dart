@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:zakat_calculator/custom_widgets/calculator_steps_title.dart';
-import 'package:zakat_calculator/screens/calculator_screen/calculator_step_four_widgets/step_four_table.dart';
-
-import '../../app_utils/app_colors.dart';
-import '../../app_utils/appfonts.dart';
+import 'package:zakat_calculator/screens/calculator_screen/calculator_step_four/widgets/step_four_table.dart';
+import '../../../app_utils/app_colors.dart';
+import '../../../app_utils/appfonts.dart';
 
 
 

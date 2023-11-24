@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:zakat_calculator/app_utils/appfonts.dart';
-import 'package:zakat_calculator/screens/calculator_screen/calculator_step_four.dart';
-import 'package:zakat_calculator/screens/calculator_screen/calculator_step_one.dart';
+
 import '../../app_utils/app_colors.dart';
-import 'calculator_step_three.dart';
-import 'calculator_step_two.dart';
+import 'calculator_step_four/calculator_step_four.dart';
+import 'calculator_step_one/calculator_step_one.dart';
+import 'calculator_step_six/calculator_step_six.dart';
+import 'calculator_step_three/calculator_step_three.dart';
+import 'calculator_step_two/calculator_step_two.dart';
+import 'calculator_strp_five/calculator_step_five_screen.dart';
+
+
 
 
 
@@ -49,8 +54,8 @@ class _ZakatCalculaterState extends State<ZakatCalculater> {
                   CalculatorStepTwo(),
                   CalculatorStepThree(),
                   CalculatorStepFour(),
-                  CalculatorStepFour(),
-                  CalculatorStepFour(),
+                  CalculatorStepFive(),
+                  CalculatorStepSix(),
                 ],
                 onPageChanged: (value) => {setCurrentPage(value)},
               ),
