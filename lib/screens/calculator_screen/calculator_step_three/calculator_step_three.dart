@@ -38,6 +38,7 @@ class _CalculatorStepThreeState extends State<CalculatorStepThree> {
   Widget build(BuildContext context) {
     return SizedBox(
       child: ListView(
+        physics: BouncingScrollPhysics(),
         children: [
           CalculatorStepsTitle(stepsTitle:"তৃতীয় ধাপ",),
           SizedBox(height: 15,),

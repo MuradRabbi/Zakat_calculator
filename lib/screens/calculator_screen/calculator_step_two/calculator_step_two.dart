@@ -27,6 +27,7 @@ class _CalculatorStepTwoState extends State<CalculatorStepTwo> {
     SizeConfig().init(context);
     return SizedBox(
       child: ListView(
+        physics: BouncingScrollPhysics(),
         children: [
           CalculatorStepsTitle(stepsTitle: "দ্বিতীয় ধাপ"),
           SizedBox(height: getProportionateScreenHeight(15),),

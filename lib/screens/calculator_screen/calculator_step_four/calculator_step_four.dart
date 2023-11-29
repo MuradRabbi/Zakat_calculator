@@ -24,6 +24,7 @@ class _CalculatorStepFourState extends State<CalculatorStepFour> {
   Widget build(BuildContext context) {
     return SizedBox(
       child: ListView(
+        physics: BouncingScrollPhysics(),
         children: [
          CalculatorStepsTitle(stepsTitle: "চতুর্থ ধাপ"),
           SizedBox(height: 15,),

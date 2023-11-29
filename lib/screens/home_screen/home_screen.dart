@@ -4,6 +4,8 @@ import 'package:zakat_calculator/custom_widgets/custom_app_bar.dart';
 import 'package:zakat_calculator/screens/home_screen/widgets/home_items.dart';
 import 'package:zakat_calculator/screens/calculator_screen/zakat_calculator.dart';
 import '../../app_utils/app_colors.dart';
+import '../about_zakat/about_zakat_screen.dart';
+import '../zakat_rules/zakat_rules_screen.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -42,13 +44,16 @@ class _HomeScreenState extends State<HomeScreen> {
                         builder: (context) => ZakatCalculater()));
                   },
                 ),
-                HomeItems(
-                  icon: "assets/images/question.json",
-                  title: "আমি যাকাতের উপযুক্ত?",
-                  callBackFunction: () {
-                    // Navigator.of(context).push(MaterialPageRoute(
-                    //     builder: (context) => ZakatCalculater()));
-                  },
+                Padding(
+                  padding: const EdgeInsets.only(right: 8.0),
+                  child: HomeItems(
+                    icon: "assets/images/information.json",
+                    title: "যাকাত সম্পর্কিত\n কিছু কথা",
+                    callBackFunction: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const AboutZakatScreen()));
+                    },
+                  ),
                 ),
               ],
             ),
@@ -59,11 +64,11 @@ class _HomeScreenState extends State<HomeScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 HomeItems(
-                  icon: "assets/images/information.json",
+                  icon: "assets/images/question.json",
                   title: "মাসআলা মাসায়েল",
                   callBackFunction: () {
-                    // Navigator.of(context).push(MaterialPageRoute(
-                    //     builder: (context) => ZakatCalculater()));
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => ZakatRulesScreen()));
                   },
                 ),
               ],

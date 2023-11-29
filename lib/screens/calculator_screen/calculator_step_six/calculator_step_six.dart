@@ -20,6 +20,7 @@ class _CalculatorStepSixState extends State<CalculatorStepSix> {
   Widget build(BuildContext context) {
     return SizedBox(
       child: ListView(
+        physics: BouncingScrollPhysics(),
         children: [
           CalculatorStepsTitle(stepsTitle: "পঞ্চম ধাপ"),
           SizedBox(height: getProportionateScreenHeight(8),),

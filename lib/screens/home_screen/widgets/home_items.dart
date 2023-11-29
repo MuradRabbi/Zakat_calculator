@@ -47,7 +47,7 @@ class HomeItems extends StatelessWidget {
             ),
           ),
           SizedBox(height: 15,),
-          Text(title, style: TextStyle(color: AppColors.blackTextColor, fontSize: 14, fontWeight: FontWeight.w700, fontFamily: AppFonts.RalewayRegular),)
+          Text(title,textAlign: TextAlign.center, style: TextStyle(color: AppColors.blackTextColor, fontSize: 14, fontWeight: FontWeight.w700, fontFamily: AppFonts.RalewayRegular),)
         ],
       ),
     );
