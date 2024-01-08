@@ -19,11 +19,6 @@ class CalculatorStepOne extends StatefulWidget {
 }
 
 class _CalculatorStepOneState extends State<CalculatorStepOne> {
-
-
-
-
-
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);

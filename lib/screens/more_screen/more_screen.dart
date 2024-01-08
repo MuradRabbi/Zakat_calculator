@@ -6,14 +6,14 @@ import '../../app_utils/app_colors.dart';
 
 
 
-class ProfileScreen extends StatefulWidget {
-  const ProfileScreen({Key? key}) : super(key: key);
+class MoreScreen extends StatefulWidget {
+  const MoreScreen({Key? key}) : super(key: key);
 
   @override
-  State<ProfileScreen> createState() => _ProfileScreenState();
+  State<MoreScreen> createState() => _MoreScreenState();
 }
 
-class _ProfileScreenState extends State<ProfileScreen> {
+class _MoreScreenState extends State<MoreScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
