@@ -3,6 +3,7 @@ import 'package:intl/intl.dart';
 
 import '../../../../app_utils/app_colors.dart';
 import '../../../../app_utils/appfonts.dart';
+import '../../../../const_and_globals/globals.dart';
 
 
 
@@ -18,7 +19,7 @@ class _DateInputFieldState extends State<DateInputField> {
 
   DateTime selectedDate = DateTime.now();
   String selectedDateString = "";
-  String dateTextHolder = "তারিখ পছন্দ করুন";
+
 
   @override
   Widget build(BuildContext context) {

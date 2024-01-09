@@ -37,7 +37,7 @@ class _MainScreenState extends State<MainScreen> {
 
 
           ],
-          color: Colors.transparent,
+          color: AppColors.appThemeColor,
           buttonBackgroundColor: AppColors.appThemeColor,
           backgroundColor: AppColors.appBackgroundColor,
           animationCurve: Curves.easeInOut,

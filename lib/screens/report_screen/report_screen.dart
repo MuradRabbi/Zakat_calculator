@@ -25,7 +25,7 @@ class _ReportScreenState extends State<ReportScreen> {
           children: [
             SizedBox(height: getProportionateScreenHeight(35)),
             CustomAppBar(icon: "assets/images/report.png", title: "রিপোর্ট"),
-            SizedBox(height: getProportionateScreenHeight(20)),
+            SizedBox(height: getProportionateScreenHeight(10)),
             Expanded(child: allReportItem())
           ],
         ),

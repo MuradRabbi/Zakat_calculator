@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 
 import '../../../../app_utils/app_colors.dart';
 import '../../../../app_utils/appfonts.dart';
+import '../../../../const_and_globals/globals.dart';
 
 
 
 class NameInputField extends StatelessWidget {
    NameInputField({super.key});
 
-   TextEditingController nameController = TextEditingController();
+
 
   @override
 

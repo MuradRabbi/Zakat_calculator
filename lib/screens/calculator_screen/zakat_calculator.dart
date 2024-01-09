@@ -7,7 +7,7 @@ import 'calculator_step_one/calculator_step_one.dart';
 import 'calculator_step_six/calculator_step_six.dart';
 import 'calculator_step_three/calculator_step_three.dart';
 import 'calculator_step_two/calculator_step_two.dart';
-import 'calculator_strp_five/calculator_step_five_screen.dart';
+import 'calculator_step_five/calculator_step_five_screen.dart';
 
 
 

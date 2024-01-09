@@ -3,6 +3,7 @@ import 'package:zakat_calculator/app_utils/size_config.dart';
 import 'package:zakat_calculator/screens/calculator_screen/calculator_step_two/widgets/step_two_input_field.dart';
 import '../../../../app_utils/app_colors.dart';
 import '../../../../app_utils/appfonts.dart';
+import '../../../../const_and_globals/globals.dart';
 
 
 
@@ -10,12 +11,7 @@ import '../../../../app_utils/appfonts.dart';
 class StepTwoTable extends StatelessWidget {
   StepTwoTable({super.key});
 
-  TextEditingController goldQtyController = TextEditingController();
-  TextEditingController goldPresentPriceController = TextEditingController();
-  TextEditingController goldTotalPriceController = TextEditingController();
-  TextEditingController silverQtyController = TextEditingController();
-  TextEditingController silverPresentPriceController = TextEditingController();
-  TextEditingController silverTotalPriceController = TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {

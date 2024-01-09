@@ -17,10 +17,6 @@ class CalculatorStepTwo extends StatefulWidget {
 
 class _CalculatorStepTwoState extends State<CalculatorStepTwo> {
 
-  TextEditingController goldQtyController = TextEditingController();
-  TextEditingController goldSalePriceController = TextEditingController();
-  TextEditingController silverSalePriceController = TextEditingController();
-  TextEditingController silverQtyController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

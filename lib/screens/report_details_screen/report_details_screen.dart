@@ -8,7 +8,7 @@ import '../../custom_widgets/custom_app_bar.dart';
 import '../calculator_screen/calculator_step_four/widgets/step_four_table.dart';
 import '../calculator_screen/calculator_step_three/widgets/step_three_table.dart';
 import '../calculator_screen/calculator_step_two/widgets/step_two_table.dart';
-import '../calculator_screen/calculator_strp_five/widgets/step_five_table.dart';
+import '../calculator_screen/calculator_step_five/widgets/step_five_table.dart';
 
 
 
