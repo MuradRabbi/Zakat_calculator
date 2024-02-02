@@ -8,10 +8,47 @@ import '../../../../const_and_globals/globals.dart';
 
 
 
-class StepTwoTable extends StatelessWidget {
+class StepTwoTable extends StatefulWidget {
   StepTwoTable({super.key});
 
+  @override
+  State<StepTwoTable> createState() => _StepTwoTableState();
+}
 
+class _StepTwoTableState extends State<StepTwoTable> {
+  void updateTotalGoldPrice(){
+    goldQty = double.tryParse(goldQtyController.text) ?? 0.0;
+    goldPresentPrice = double.tryParse(goldPresentPriceController.text) ?? 0.0;
+
+    double goldTotalPrice = goldQty * goldPresentPrice;
+    goldTotalPriceController.text = goldTotalPrice.toString();
+    totalGoldAndSilverValue();
+  }
+
+  void updateTotalSilverPrice(){
+    silverQty = double.tryParse(silverQtyController.text) ?? 0.0;
+    silverPresentPrice = double.tryParse(silverPresentPriceController.text) ?? 0.0;
+
+    double silverTotalPrice = silverQty * silverPresentPrice;
+    silverTotalPriceController.text = silverTotalPrice.toString();
+    totalGoldAndSilverValue();
+  }
+
+  void totalGoldAndSilverValue(){
+    totalGoldAndSilverPrice =  ((double.parse(goldTotalPriceController.text)) + (double.parse(silverTotalPriceController.text)));
+    // totalGoldAndSilverPrice =  goldTotalPrice + silverPresentPrice;
+    totalGoldAndSilverPriceController.text = totalGoldAndSilverPrice.toString();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    goldQtyController.addListener(updateTotalGoldPrice);
+    goldPresentPriceController.addListener(updateTotalGoldPrice);
+    silverQtyController.addListener(updateTotalSilverPrice);
+    silverPresentPriceController.addListener(updateTotalSilverPrice);
+    totalGoldAndSilverPriceController.addListener(updateTotalSilverPrice);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +64,6 @@ class StepTwoTable extends StatelessWidget {
     );
   }
 
-
   Widget tableHead(){
     return  Row(
       children: [
@@ -41,7 +77,6 @@ class StepTwoTable extends StatelessWidget {
       ],
     );
   }
-
 
   Widget tableHeadItem(int flex , String title){
     return  Expanded(

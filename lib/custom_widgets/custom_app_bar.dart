@@ -18,25 +18,25 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SizedBox(width: 15,),
+        const SizedBox(width: 15,),
         SizedBox(
           height: 40,
           width: 40,
           child: Card(
             elevation: 15.0,
-            color: Color(0xff32a349),
+            color: const Color(0xff32a349),
             shadowColor: Colors.blueGrey ,
-            shape: RoundedRectangleBorder(
+            shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(6))
             ),
             child: Container(
-              margin: EdgeInsets.all(6),
+              margin: const EdgeInsets.all(6),
               child: Image.asset(icon, color: Colors.white,),
             ),
           ),
         ),
-        SizedBox(width: 10,),
-        Text(title,style: TextStyle(color: AppColors.blackTextColor, fontSize: 20, fontWeight: FontWeight.w700),),
+        const SizedBox(width: 10,),
+        Text(title,style: const TextStyle(color: AppColors.blackTextColor, fontSize: 20, fontWeight: FontWeight.w700),),
       ],
     );
   }

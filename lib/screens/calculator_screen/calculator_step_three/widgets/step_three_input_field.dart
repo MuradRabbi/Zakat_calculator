@@ -79,7 +79,7 @@ class StepThreeInputField extends StatelessWidget {
       textAlign: TextAlign.end,
       decoration: InputDecoration(
           isDense: true,
-          hintText: "0",
+          hintText: "0.0",
           hintStyle: TextStyle(color: AppColors.blackTextColor, fontSize: 16, fontWeight: FontWeight.w500, fontFamily: AppFonts.RalewayRegular),
           focusedBorder: InputBorder.none,
           enabledBorder: InputBorder.none

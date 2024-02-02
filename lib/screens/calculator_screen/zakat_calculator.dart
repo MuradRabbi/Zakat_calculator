@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:zakat_calculator/app_utils/appfonts.dart';
 
 import '../../app_utils/app_colors.dart';
+import '../../const_and_globals/globals.dart';
+import '../report_screen/report_screen.dart';
 import 'calculator_step_four/calculator_step_four.dart';
 import 'calculator_step_one/calculator_step_one.dart';
 import 'calculator_step_six/calculator_step_six.dart';
@@ -75,9 +77,9 @@ class _ZakatCalculaterState extends State<ZakatCalculater> {
                     visible: currentPage == 0 ? false : true,
                     child: previousStepButton(),
                   ),
-                  Visibility(
+                  currentPage == 5 ? doneButton()  : Visibility(
                     visible: currentPage == 5 ? false : true,
-                    child: nextStepButton(),
+                    child:nextStepButton(),
                   ),
 
                 ],
@@ -167,18 +169,22 @@ class _ZakatCalculaterState extends State<ZakatCalculater> {
   void nextChangePage(){
     if(currentPage == 6){
       // Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginScreen()));
+      print(currentPage.toString());
     }
     else{
       _pageViewController.animateToPage(currentPage + 1, duration: Duration(milliseconds: 500), curve: Curves.linear);
+      print("next page clicked $currentPage");
     }
   }
 
   void previousChangePage(){
     if(currentPage == 6){
       // Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginScreen()));
+      print(currentPage.toString());
     }
     else{
       _pageViewController.animateToPage(currentPage - 1, duration: Duration(milliseconds: 500), curve: Curves.linear);
+      print("previous page click $currentPage");
     }
   }
 
@@ -198,6 +204,76 @@ class _ZakatCalculaterState extends State<ZakatCalculater> {
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5),
           color: (currentPage == pageNo) ? AppColors.appThemeColor : Colors.grey
+      ),
+    );
+  }
+
+
+  InkWell doneButton(){
+    return InkWell(
+      onTap: (){
+        Navigator.of(context).pop();
+        Navigator.of(context).push(MaterialPageRoute(builder: (context)=> ReportScreen()));
+        dateTextHolder = "তারিখ পছন্দ করুন";
+        nameController.clear();
+        goldQtyController.clear();
+        goldPresentPriceController.clear();
+        goldTotalPriceController.clear();
+        silverQtyController.clear();
+        silverPresentPriceController.clear();
+        silverTotalPriceController.clear();
+        totalGoldAndSilverPriceController.clear();
+        cashController.clear();
+        accumulatedDepositsController.clear();
+        moneyOwedController.clear();
+        securityMoneyController.clear();
+        foreignCurrencyController.clear();
+        bankAccountDepositedController.clear();
+        specialDepositAccountController.clear();
+        salaryAccountController.clear();
+        bankGuaranteeMoneyController.clear();
+        depositedInsurancePremiumController.clear();
+        bondTreasuriesAndSavingsPaperController.clear();
+        providentFundController.clear();
+        companyShareForDividendController.clear();
+        companyShareForSaleController.clear();
+        accumulatedCashInAssociationController.clear();
+        cashInvestedInBusinessController.clear();
+        outstandingValueForBusinessProductController.clear();
+        accumulatedCashFromRentAndOthersController.clear();
+        totalCashController.clear();
+        purchaseLandAndPlotForBusinessController.clear();
+        purchaseFlatAndHouseForBusinessController.clear();
+        purchaseVehicleForBusinessController.clear();
+        salableProductForCompanyController.clear();
+        allSalableProductForBusinessController.clear();
+        rawMaterialsForProductionController.clear();
+        purchaseAnimalsForBusinessController.clear();
+        totalAssetForBusinessController.clear();
+        loanForFamilyPurposeController.clear();
+        allPersonalLoanController.clear();
+        businessLoanOnWhichFamilyAndPersonalExpenseDependentController.clear();
+        previousDueHouseRentAndUtilityController.clear();
+        workerSalaryDueOnCurrentZakatYearController.clear();
+        loanForBusinessController.clear();
+        loanForDevelopmentController.clear();
+        loanEmiForTheWholeYearController.clear();
+        wifeDowryController.clear();
+        totalDeductibleAssetFromZakatController.clear();
+        totalAssetForZakatController.clear();
+        netAssetForZakatController.clear();
+        netZakatController.clear();
+      },
+      child: Container(
+          alignment: Alignment.center,
+          height: 35,
+          width: 105,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(30),
+            color: AppColors.appThemeColor,
+
+          ),
+          child:  Text("সম্পন্ন করুন", style: TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w700, fontFamily: AppFonts.RalewayRegular),),
       ),
     );
   }

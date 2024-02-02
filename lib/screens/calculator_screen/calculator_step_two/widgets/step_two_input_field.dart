@@ -14,6 +14,7 @@ class StepTwoInputField extends StatelessWidget {
   TextEditingController totalPriceController;
   String assetName;
   String? fieldDescription;
+  bool? readOnly;
 
    StepTwoInputField({
     required this.qtyController,
@@ -60,12 +61,12 @@ class StepTwoInputField extends StatelessWidget {
                   child: TextField(
                     cursorColor: AppColors.blackTextColor,
                     controller: qtyController,
-                    keyboardType: TextInputType.text,
+                    keyboardType: TextInputType.number,
                     textInputAction: TextInputAction.done,
                     textAlign: TextAlign.end,
                     decoration: InputDecoration(
                         isDense: true,
-                        hintText: "0",
+                        hintText: "0.0",
                         hintStyle: TextStyle(color: AppColors.blackTextColor, fontSize: 16, fontWeight: FontWeight.w500, fontFamily: AppFonts.RalewayRegular),
                         focusedBorder: InputBorder.none,
                         enabledBorder: InputBorder.none
@@ -87,12 +88,12 @@ class StepTwoInputField extends StatelessWidget {
                   child:TextField(
                     cursorColor: AppColors.blackTextColor,
                     controller: presentPriceController,
-                    keyboardType: TextInputType.text,
+                    keyboardType: TextInputType.number,
                     textInputAction: TextInputAction.done,
                     textAlign: TextAlign.end,
                     decoration: InputDecoration(
                         isDense: true,
-                        hintText: "0",
+                        hintText: "0.0",
                         hintStyle: TextStyle(color: AppColors.blackTextColor, fontSize: 16, fontWeight: FontWeight.w500, fontFamily: AppFonts.RalewayRegular),
                         focusedBorder: InputBorder.none,
                         enabledBorder: InputBorder.none
@@ -117,9 +118,10 @@ class StepTwoInputField extends StatelessWidget {
                   keyboardType: TextInputType.text,
                   textInputAction: TextInputAction.done,
                   textAlign: TextAlign.end,
+                  readOnly: true,
                   decoration: InputDecoration(
                       isDense: true,
-                      hintText: "0",
+                      hintText: "0.0",
                       hintStyle: TextStyle(color: AppColors.blackTextColor, fontSize: 16, fontWeight: FontWeight.w500, fontFamily: AppFonts.RalewayRegular),
                       focusedBorder: InputBorder.none,
                       enabledBorder: InputBorder.none
